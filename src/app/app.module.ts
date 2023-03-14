@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GeometriComponent } from './geometri/geometri.component';
 import { FormsModule } from '@angular/forms';
+import { VittighederComponent } from './vittigheder/vittigheder.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GeometriComponent
+    GeometriComponent,
+    VittighederComponent
     ],
   imports: [
     BrowserModule,
