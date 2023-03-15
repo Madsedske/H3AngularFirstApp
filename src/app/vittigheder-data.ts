@@ -3,8 +3,3 @@ export interface VittighederData {
     vittighed: string;
     punchline: string;
 }
-
-export interface VittighederPunchline {
-    id: number;
-    punchline: string;
-}

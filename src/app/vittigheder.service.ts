@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Observable, of, Subject } from 'rxjs';
-import { VittighederData, VittighederPunchline } from './vittigheder-data';
+import { VittighederData } from './vittigheder-data';
 
 @Injectable({
   providedIn: 'root'
 })
 export class VittighederService {
   private vittigheder : Array<VittighederData>;
-  private vittighederPunchline: Array<VittighederPunchline>;
   private vittighederSubject$: Subject<VittighederData[]> = new Subject<VittighederData[]>();
   icifejif$: Observable<VittighederData[]> = this.vittighederSubject$.asObservable();
 
@@ -24,18 +23,6 @@ export class VittighederService {
           {id: 10, vittighed: "Hvad er farligst at ryge oppe i Rundetårn?", punchline: "Ned."}
       ]
       this.vittighederSubject$.next(this.vittigheder);
-
-      this.vittighederPunchline = [
-        {id: 1, punchline: "Hun troede det var Nutella."},
-        {id: 2, punchline: "Er det over grænsen?"},
-        {id: 3, punchline: "Haj med dej."},
-        {id: 4, punchline: "Hun gik ind i propellen!"},
-        {id: 5, punchline: "Han faldte ned og blev ædt af en haj."},
-        {id: 6, punchline: "En sten."},
-        {id: 7, punchline: "Fordi den droppede ud af Haj-School."},
-        {id: 9, punchline: "For at spare på lyset."},
-        {id: 10, punchline: "Ned."}
-    ]
   }
 
   emitRandomVittighed(): Observable<VittighederData> {
