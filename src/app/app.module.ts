@@ -13,6 +13,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DataSource } from '@angular/cdk/collections';
 import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MorsePipe } from './morse.pipe';
+import { MorseCodeComponent } from './morse-code/morse-code.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     VittighederComponent,
     ECarsComponent,
     FossilBilerComponent,
+    MorsePipe,
+    MorseCodeComponent,
   ],
   imports: [
     BrowserModule,
